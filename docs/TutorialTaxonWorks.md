@@ -21,6 +21,7 @@ Don't be overwhelmed by the large number of cards. Most of them are the solution
 
 ## The OTU
 This is THE most important concept to understand about TaxonWorks: Taxon names and the "taxon itself" are stored seperately. It makes a lot of sense to do so, as **a taxon (called "Operational Taxonomic Unit, OTU") is not the same as its name.**
+Usually, an OTU is just representing (=linked to) a taxon name that is placed in a taxonomical hierarchy. However, you could also create an OTU like "thin-leaved species of Salix" to represent the biological association between a weevil species and a host plant that wasn't accurately identified. A collection database may need an OTU such as "unsorted beetles and flies".
 
 <div style="position:relative;padding-top:56.25%;">
   <iframe

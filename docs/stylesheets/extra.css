@@ -1,0 +1,83 @@
+/* Biological Relationships tables */
+
+table.bio-rel {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+/* Equal column widths for all header cells */
+table.bio-rel th {
+  width: 50%;
+}
+
+/* Subject side (relationship name) */
+table.bio-rel th.subject {
+  background-color: #c8c8c8;
+  color: #1a1a1a;
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5em 0.75em;
+  border: 1px solid #aaaaaa;
+}
+
+/* Object side (inverted relationship name) */
+table.bio-rel th.object {
+  background-color: #7db87d;
+  color: #1a1a1a;
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5em 0.75em;
+  border: 1px solid #aaaaaa;
+}
+
+/* Property cells */
+table.bio-rel td.props {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  padding: 0.4em 0.75em;
+  border: 1px solid #aaaaaa;
+}
+
+/* Definition rows */
+table.bio-rel td:not(.props):not(.note) {
+  padding: 0.5em 0.75em;
+  border: 1px solid #aaaaaa;
+}
+
+/* Annotation rows (asserted distribution, citation, etc.) */
+table.bio-rel td.note {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+  padding: 0.4em 0.75em;
+  border: 1px solid #aaaaaa;
+}
+
+/* Dark mode */
+[data-md-color-scheme="slate"] table.bio-rel th.subject {
+  background-color: #4a4a4a;
+  color: #e0e0e0;
+  border-color: #666666;
+}
+
+[data-md-color-scheme="slate"] table.bio-rel th.object {
+  background-color: #3a6b3a;
+  color: #e0e0e0;
+  border-color: #666666;
+}
+
+[data-md-color-scheme="slate"] table.bio-rel td.props {
+  background-color: #2a2a2a;
+  color: #d0d0d0;
+  border-color: #666666;
+}
+
+[data-md-color-scheme="slate"] table.bio-rel td:not(.props):not(.note) {
+  border-color: #666666;
+}
+
+[data-md-color-scheme="slate"] table.bio-rel td.note {
+  background-color: #323232;
+  color: #d0d0d0;
+  border-color: #666666;
+}

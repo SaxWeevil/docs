@@ -52,6 +52,9 @@ nav = [
   "TutorialAbout.md",
   "TutorialTaxonWorks.md",
   "TutorialAddSpecies.md"
+  ]},
+  {"Data Standards" = [
+  "BiologicalRelationships.md"
   ]}
 ]
 
@@ -63,7 +66,7 @@ nav = [
 #
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
-#extra_css = ["stylesheets/extra.css"]
+extra_css = ["stylesheets/extra.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
@@ -71,7 +74,7 @@ nav = [
 # The path provided should be relative to the "docs_dir".
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
-extra_javascript = ["assets/js/externalURL.js"]
+extra_javascript = ["assets/js/externalURL.js", "assets/js/bio-rel.js"]
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options
@@ -314,7 +317,8 @@ link = "https://github.com/Curculionidae"
 [project.markdown_extensions.pymdownx.blocks.caption]
 [project.markdown_extensions.pymdownx.superfences]
 custom_fences = [
-  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+  { name = "bio-rel", class = "bio-rel-block", format = "pymdownx.superfences.fence_code_format" }
 ]
 
 

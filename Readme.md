@@ -7,6 +7,8 @@ For more information, refer to the authoring tutorial on the zensical documentat
 # Editing locally on your computer
 Git clone the repository to your computer. To run the site locally, you need to have the python package Zensical installed. It's recommended to install it in its own environment (use e.g. conda). Open a terminal in the directory that you cloned, activate your environment that has zensical installed, and type "zensical serve" in the terminal. The website will be built from source and served via localhost, you'll get an URL that you can open in your browser. **Now you have a live preview of every edit you make to the raw files!**
 
+When you're done with your edits, git add them, git commit and git push.
+
 # bio-rel table syntax
 
 Biological relationship tables use a shorthand notation that is automatically expanded to HTML at build time (via `docs/hooks.py`).

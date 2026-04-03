@@ -39,9 +39,8 @@ In most cases, a more specific biological relationship can be used, also definin
 ```
 ````
 
-The 6-column example table in the Preface of `BiologicalRelationships.md` is left as raw HTML — it is a one-off illustration, not a data entry target.
-
 # Custom CSS and table styling
+(This section is probably not relevant for you)
 
 The file `docs/stylesheets/extra.css` contains custom CSS for the biological relationships tables. It is loaded via `extra_css` in `zensical.toml`.
 

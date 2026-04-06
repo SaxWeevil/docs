@@ -1,8 +1,40 @@
 # How to edit the documentation:
-The pages are just markdown files (.md) in the /docs directory. You can edit them directly on GitHub. Place images in the /assets/images directory and embed them in the markdown file as seen in the existing files.  
+The pages are just markdown files (.md) in the /docs directory. You can edit them directly on GitHub.  
 Github Actions will deploy the website after you save changes.  
 To adjust the order and structure of the pages, adjust nav in the zensical.toml file.  
 For more information, refer to the authoring tutorial on the zensical documentation: https://zensical.org/docs/authoring/markdown/
+
+## Inserting images
+
+Place image files in `/docs/assets/images/`. Then embed them using a markdown link **without** a leading `../`:
+
+```markdown
+![Alt text](assets/images/yourimage.png)
+```
+
+Zensical automatically adjusts the path when building. Using `../assets/images/` or `/assets/images/` will produce a broken link on the deployed site (even if it works locally).
+
+To add a caption, use a figure block:
+
+```markdown
+<figure markdown="span">
+  ![Alt text](assets/images/yourimage.png)
+  <figcaption>Your caption here.</figcaption>
+</figure>
+```
+
+## Inserting videos
+
+Place `.webm` video files in `/docs/assets/videos/`. Embed them using a raw HTML video element with `../assets/videos/` (with the leading `../`):
+
+```html
+<video controls autoplay loop muted>
+  <source src="../assets/videos/yourvideo.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+```
+
+Note: the path prefix is different from images (`../assets/videos/` vs `assets/images/`) because raw HTML tags are passed through unchanged by Zensical, while markdown image links get their path adjusted automatically.
 
 # Editing locally on your computer
 Git clone the repository to your computer. To run the site locally, you need to have the python package Zensical installed. It's recommended to install it in its own environment (use e.g. conda). Open a terminal in the directory that you cloned, activate your environment that has zensical installed, and type "zensical serve" in the terminal. The website will be built from source and served via localhost, you'll get an URL that you can open in your browser. **Now you have a live preview of every edit you make to the raw files!**

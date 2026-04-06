@@ -42,7 +42,7 @@ When adding information, imagine attaching new nodes to the network. **Don't wor
 <figure markdown="span">
 <figcaption>Information, such as distribution, can be added to the OTU of a synonymized name. This allows to retain information for synonymized names, but TaxonWork will summarize everything for you.
 This figure is probably very inaccurate, it's just to give an idea.</figcaption>
-  ![Image title](../assets/images/datastructure_r.png)
+  ![Image title](assets/images/datastructure_r.png)
 </figure>
 <div style="display:none;">
 <!-- This is the source code for the flowchart, in case you want to adjust it render it on https://mermaid.ai/

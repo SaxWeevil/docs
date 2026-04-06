@@ -22,7 +22,7 @@ For synonyms, the parent is always the same as for the valid name.
   <source src="../assets/videos/NewTaxonName.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
-![Soft Validation in TaxonWorks](../assets/images/soft_validations.png){ align=right }
+![Soft Validation in TaxonWorks](assets/images/soft_validations.png){ align=right }
 ## Soft Validation
 As you create the taxon name, a notification about "Soft Validation" will immediately pop up. It is informing you about missing entries or contradictions in what you entered. It's always good to pay attention to this.  
 Most importantly, you have to **add a corresponding OTU to your new TaxonName**. Do this simply by clicking the green "Fix" button.

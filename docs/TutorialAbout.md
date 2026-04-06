@@ -8,7 +8,7 @@ This tutorial is following the workflow that is used to move the **[World Catalo
 The Cleonini Catalogue was previously published as a website (html), but each genus was also summarized in a PDF file identical to the respective webpage.  
 It is an excellent example of a richly annotated catalog, many other catalogs contain fewer citations for the information they provide. However, it would profit from living in a database such as TaxonWorks, where the data is much more manageable, interlinked and filterable.
 <figure markdown="span">
-  ![Image title](../assets/images/MeregalliCleonini.png)
+  ![Image title](assets/images/MeregalliCleonini.png)
   <figcaption>Entry for a genus in the original Cleonini Catalogue. It also contains the full references for each citation, not included in the screenshot.</figcaption>
 </figure>
 We see a lot of information that needs to be transferred into TaxonWorks:

@@ -1,12 +1,6 @@
 # Biological Relationships
 
-**Problems/Limitations:** More work would be needed to include the biology of exceptional groups such as Scolytinae/Platypodinae/Cossoninae, pollination, interactions with fungi/other animals, or the biology of those species that are saproxylic. In saproxylic species, the problem would be that the identity of the "host" is often unclear, the biology of those weevils cannot easily be understood as a biological relationship between two species, its more a biological relationship between a weevil and a micro-habitat.
-
----
-
-## Preface
-
-### Biological Relationship vs Biological Association?
+## Preface - Biological Relationship vs Biological Association
 
 In TaxonWorks, **Biological Relationships are definitions of biological interaction** that can take place between two objects (feeds on, reared from, collected from...).
 
@@ -19,6 +13,8 @@ In TaxonWorks, **Biological Relationships are definitions of biological interact
 A simple **Biological association** could be `Adosomus roridus` (= Otu) was `reared from` (= relationship) the `stem of Achillea millefolium` (= AnatomicalPart of an Otu). Those statements can be further annotated e.g. with an asserted distribution (in France), images (of the eating trace) and many more information which will be outlined further in this documentation.
 
 The overall goal of this task is to simplify biological associations we've observed on our own in nature or which have been observed by others and have been written down in a publication (= source). Those statements are often of varying accuracy and contain different additional information. With this task we want to provide an environment to store such information in a database and to utilize it in many ways (phylogeny, field books...).
+
+**Problems/Limitations:** More work would be needed to include the biology of exceptional groups such as Scolytinae/Platypodinae/Cossoninae, pollination, interactions with fungi/other animals, or the biology of those species that are saproxylic. In saproxylic species, the problem would be that the identity of the "host" is often unclear, the biology of those weevils cannot easily be understood as a biological relationship between two species, its more a biological relationship between a weevil and a micro-habitat.
 
 ---
 
@@ -74,9 +70,9 @@ In TaxonWorks, the relationship (= e.g. larva feeding in roots of) cannot be com
 ---
 -->
 ## Theory
-Our knowledge about the biology of weevils is limited and will always stay limited. Therefore, any attempt to catalog weevil-hostplant interactions should focus on capturing information on published statements or direct observations: Rather than trying to capture biological reality itself, we have to focus on *what was actually observed*, ("a specimen was reared from a seedpod of plant xy at place xy, according to source xy") rather than "the species is developing in seed pods of plant xy"). Or: past an experienced entomologist may stated, that a beetle lives on plant X while he just observed the adult beetle feeding on that plant. Statements like "lives on" always contain assumptions about the behaviour of a species which was not observed and can cause biased expectations to others. Thus, we need to pay attention to statements like this and assign them to the most acurate term which has been observed like `collected from` or `observed feeding in wild on`. We've thinked a lot about what can actually be observed and came up with a few terms which have to be used.
+Our knowledge about the biology of weevils is limited and will always stay limited. Therefore, any attempt to catalog weevil-hostplant interactions should focus on capturing information on published statements or direct observations: Rather than trying to capture biological reality itself, we have to focus on *what was actually observed*, ("a specimen was reared from a seedpod of plant xy at place xy, according to source xy") rather than "the species is developing in seed pods of plant xy"). Or: past an experienced entomologist may stated, that a beetle lives on plant X while he just observed the adult beetle feeding on that plant. Statements like "lives on" always contain assumptions about the behaviour of a species which was not observed and can cause biased expectations to others. Thus, we need to pay attention to statements like this and assign them to the most acurate term which has been observed like `collected from` or `observed feeding in wild on`. We've thinked a lot about what can actually be observed and came up with a few terms which are considered to cover the most.
 
-### Scope: What kind of information do we want to store?
+## Scope: What kind of information do we want to store?
 
 When putting data into a structured format, some information is always lost. But the database will also be **an index to literature** and other evidence. Not all details are captured within TaxonWorks, but the original source can always be consulted for a more detailed, but only human-readable description (like a detailed description of the feeding trace). What you have to ask yourself is:
 <!--
@@ -96,7 +92,7 @@ When putting data into a structured format, some information is always lost. But
 - (maybe) What plant part are the adults sitting on?
 - (maybe) did your source state some general information about the fedding specifity like mono-, oligo- or polyphagy?
 
-Interactions between larvae and plants are more relevant than interactions by adults: They are more likely to have evolutionary significance, and the presence of suitable larval hosts is required for reproduction, having implications for conservation, crop protection and species distribution. Nevertheless, specific observations of adults indicate where to actually find the adult species or can be of indirect evidence of host plant relationships noone ever conducted research on (if you collect all the time the adult beetle from a single species there is evidence about its feeding behaviour).
+Interactions between larvae and plants are more relevant than interactions with adults: They are more likely to have evolutionary significance, and the presence of suitable larval hosts is required for reproduction, having implications for conservation, crop protection and species distribution. Nevertheless, specific observations of adults indicate where to actually find the adult species or can be of indirect evidence of host plant relationships noone ever conducted research on (if you collect all the time the adult beetle from a single species there is evidence about its feeding behaviour).
 
 <!--
 
@@ -154,69 +150,32 @@ If you deal with a relationship not integrated please don't hesitate to contact 
 
 ## List of Biological Relationships
 
+```bio-rel
+collected from | Yielded from
+Used for any life stage of an organism which was simply collected from a plant (for example: “on milkweed”). Also used for collection objects that have plant names on the locality label.
+```
 
-### First set, focus on lines of evidence
+```bio-rel
+feeding observed in the wild on | fed upon in the wild by
+Used if feeding was observed in wild by any life stage of an organism. Use this one too, if the specimen was later collected since “feeding in wild” is the more valuable information.
+```
+
+```bio-rel
+feeding observed in experimental setup on | fed upon in experimental setup by
+A specimen has been observed feeding on a plant in an experimental setup (for example larvae and plant material where taken home in a petri dish to observe feeding patterns).
+```
+
+```bio-rel
+reared from | yielded by rearing
+Used if the complete life cycle of a weevil was observed (either in wild or in an experimental setup)
+```
 
 ```bio-rel
 undefined relationship with | undefined relationship with
 Definition: None (no information given)
 ```
 
-```bio-rel
-dubious relationship | dubious relationship
-A relationship that seems unlikely, but has been published. Ideally, cite the source that states that the relationship is dubious, otherwise cite the original source.
-```
-
-```bio-rel
-asserted relationship | asserted relationship
-This relationship is to be used if no other information is given, e.g. for catalog entries where plants and insects are associated with each other, without any lines of evidence given. It is assumed that this kind of relationship represents some kind of "common knowledge", but it cannot be verified as no lines of evidence are given. If certainly dubious, use "dubious relationship" instead!
-```
-
-```bio-rel
-asserted oligophagous relationship with higher taxon | target of asserted oligophagous relationship
-Literature will often contain information such as "associated with Lamiaceae". Using this relationship is more accurate than using just the asserted relationship.
-```
-
-```bio-rel
-feeding observed in the wild on | fed upon in the wild by
-A specimen has been observed feeding on a host in the wild.
-```
-
-```bio-rel
-feeding observed in experimental setup on | fed upon in experimental setup by
-A specimen has been observed feeding on a plant in an experimental setup.
-```
-
-```bio-rel
-reared from | yielded by rearing
-In most cases, a more specific biological relationship can be used, also defining the plant organ.
-```
-
-```bio-rel
-agricultural pest of | host for agricultural pest
-It does make sense to have this as a separate category, because of economic importance but also because agricultural literature seems to be erroneous more often than other sources.
-```
-
-```bio-rel
-visitor of | visited by
-An unclear relationship. E.g. a specimen has been collected from a plant, but it is unknown if it was feeding or not. (property imago added, as larvae that are "visiting" a plant would constitute a larval host relationship in almost any case)
-```
-
-```bio-rel
-flower visitor of | flower visited by
-Separate from "visitor of", as flower visitors may have ecological properties that are distinct from general visitors. A more complex system would define various pollination relationships (e.g. brood-site pollinators). (property imago added, as larvae that are "visiting" a plant would constitute a larval host relationship in almost any case)
-```
-
-```bio-rel
-collected adults from dead plant matter of | dead plant matter yielded adults of
-e.g. adult specimen of a Cossonine collected beneath the bark of <em>Pinus</em> sp.
-```
-
-```bio-rel
-collected larvae from dead plant matter of | dead plant matter yielded larvae of
-e.g. larva of a Cossonine collected beneath the bark of <em>Pinus</em> sp.
-```
-
+<!---
 ### Second set, focus on biology
 
 ```bio-rel
@@ -251,6 +210,54 @@ An attempt to sort relationships according to "asserted", "asserted or observati
 [View sorting chart (Google Drive)](https://drive.google.com/file/d/1zf3lQmlWib-aO218YkNnpL579aAiPRW8/view?usp=sharing)
 
 ---
+--->
+
+## How to add information about life stages/ the infested body parts?
+
+If you've observed a larvae eating on the leaf of any plant you are dealing with "anatomicalParts" in Taxonworks. Depending on if you we're talking about the beetle or the plant there are two classes:
+
+1. lifeStage: can be larvae, egg or puppae of a beetle. Adult is considered to be default und has not be selected
+2. real anatomical parts: body parts of the plant life leaf, flower bud, roots...
+
+Even though it's clear for us, that a herb has a leaf, steam, flower bud and roots this it's not configured in Taxonworks by default. Thus everytime we want to use AnatomicalParts of a plant or beetle in a biological association, we have to create it first seperately. To do that in an easy way, you can create our reuse/ select existing anatomicalParts simultaneously with the complete biological association. To stabilize our dictionary and to avoid duplicates produced by misspelling you can use in most cases the "In project" tab. Here you find all terms which have been used within this project by now.
+<p align="center">
+<img width="356" height="341" alt="grafik" src="https://github.com/user-attachments/assets/df1487a1-0134-4646-963c-644ce15507d4" />
+</p>
+
+If you want use a new one feel free to 1. search for terms provided by the assigned ontologies. In case you don't find a appropiate termn you can 2. create a new one:
+<p align="center">
+<img width="623" height="397" alt="Bildschirmfoto vom 2026-04-06 17-37-05" src="https://github.com/user-attachments/assets/faff0bc1-257a-4d50-b4b7-3d468cec1839" />
+</p>
+
+## Sources
+
+If information was digitezed from scientific literature the paper/ book can be cited via the "Source" panel. Feel free to add the exact page number in case it's from a larger publication wich contains many different information too.
+In case it's a personal observation without publication leave that field. Your name will appear on Taxonpages as a source.
+
+## Shapes
+
+Many host plant relationships change over a braod geographic distribution. Thus it can be usefull to record the location of an observation. Since the search function is not a global magic tool which contain all shapes of mountains, lakes, citys and so on it's often necessary add your disered shape seperately if it's not implemented yet. We think that in many cases selecting the country can be a first appraoch to achieve coarse patterns even though a more precise location was mentioned in the publication.
+
+## Doubt about a biological Association?
+
+In case you have doubt about a biological association you're digitizing, you can use "Confidences" to keep track of this (below the task in the table via radial annotator):
+<img width="1906" height="617" alt="Bildschirmfoto vom 2026-04-06 17-51-50" src="https://github.com/user-attachments/assets/ddb842b6-41f0-4243-aadd-0f52234860db" />
+
+
+<img width="1906" height="617" alt="grafik" src="https://github.com/user-attachments/assets/77c61dfa-9f5f-483e-ab6d-e1625202aed8" />
+
+## Tags
+
+Like in doubts, it's possible to tag certain biological information to a biological association in the table below the task via radial annotator:
+
+- Endophagous: larvae feed inside tissues
+- Exophagous: larvae feed outside tissues
+- Monophagous: according to the cited literature, this species feeds exclusively on a single plant species
+- Oligophagous: according to the cited literature, this species feeds on a few closely related plant species
+- Polyphagous: according to the cited literature, this species feeds on many plant species
+
+Classifiers like mono-, oligo- and polyphagy can not be realized by filters when strictly storing host plant associations in a database like it's been done in Taxonworks. Since such information can be very usefull as a filter data or to estimate where else to find the beetle it has to implemented.
+
 
 ## Preview: TaxonPages
 

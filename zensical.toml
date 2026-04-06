@@ -35,7 +35,9 @@ edit_uri = "edit/main/docs/"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 Weevil Workers
+Copyright &copy; 2026 Weevil Workers |
+Contributor documentation for the Curculionoidea project in <a href="https://taxonworks.org" target="_blank" rel="noopener">TaxonWorks</a> |
+Species catalog at <a href="https://catalog.curculionoidea.org">catalog.curculionoidea.org</a>
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
@@ -310,8 +312,15 @@ toggle.name = "Switch to light mode"
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
 [[project.extra.social]]
+icon = "lucide/book-open"
+link = "https://catalog.curculionoidea.org"
+name = "Curculionoidea Catalog"
+
+[[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/Curculionidae"
+name = "GitHub"
+[project.markdown_extensions.admonition]
 [project.markdown_extensions.attr_list]
 [project.markdown_extensions.md_in_html]
 [project.markdown_extensions.pymdownx.blocks.caption]

@@ -3,6 +3,9 @@ title: Welcome
 #description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
 icon: lucide/home
 ---
+!!! tip "Looking for the Curculionoidea catalog?"
+    The weevil species catalog is at **[catalog.curculionoidea.org](https://catalog.curculionoidea.org)**. This site is documentation for contributors using TaxonWorks.
+
 **Welcome to the community documentation for the weevil project on TaxonWorks!**
 
 This documentation is not meant to replace the official [TaxonWorks Guide](https://docs.taxonworks.org/guide/).

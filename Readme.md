@@ -1,3 +1,4 @@
+The documentation is live at:  http://curculionidae.github.io/docs/
 # How to edit the documentation:
 The pages are just markdown files (.md) in the /docs directory. You can edit them directly on GitHub.  
 Github Actions will deploy the website after you save changes.  
